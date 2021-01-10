@@ -1,3 +1,8 @@
+# Для запуска проекта выполните команды:
+`npm i`
+`npm i -g concurrently`
+`npm run dev`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
