@@ -1,0 +1,20 @@
+$purple: #b823ff;
+$blue: #1cddee;
+$lightblue: #d5ebf1;
+$lightgray: #eee;
+$gray: #ddd;
+
+
+@import './basic';
+@import './form';
+@import './search';
+@import './table';
+@import './control';
+@import './authPage';
+
+.contacts {
+  background: #fff;
+  width: 90vw;
+  padding: 30px;
+  margin: 100px auto;
+}

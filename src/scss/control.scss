@@ -1,0 +1,14 @@
+.control {
+  display: flex;
+  justify-content: space-between;
+
+  &__addRow, &__removeRow, &__sortSettings, &__searchSettings {
+    padding: 10px 30px;
+    border: none;
+  }
+  button + button,
+  select + select {
+    margin-left: 10px;
+  }
+}
+
