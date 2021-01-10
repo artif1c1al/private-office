@@ -2,31 +2,53 @@
   "users": [
     {
       "email": "zhuravlenkoartem@gmail.com",
-      "password": "$2a$10$N14PsAcceNu8UgVVsZFp9ecENNSWNWBG.hpyv1e2Pu4b4DrV16v4q",
+      "password": "$2a$10$Oc1ryQX3WDA6v1OtvybC5.uxyVz1n8Sa9qwm0rbQl6nykUG44hLQO",
       "id": 1
     }
   ],
   "notes": [
     {
+      "id": "1",
+      "visualized": false,
+      "fields": {
+        "name": "Artem",
+        "occupation": "Frontend",
+        "phone": "8 978 555 64 33",
+        "email": "call@me.now",
+        "CreationDate": "10.01.21"
+      }
+    },
+    {
       "id": "2",
       "visualized": false,
       "fields": {
-        "name": "",
-        "occupation": "2",
-        "phone": "d",
-        "email": "d",
-        "CreationDate": ""
+        "name": "Oleg",
+        "occupation": "Builder",
+        "phone": "8 888 888 88 88",
+        "email": "builder@builld.ru",
+        "CreationDate": "12.09.20"
       }
     },
     {
       "id": "3",
       "visualized": false,
       "fields": {
-        "name": "",
-        "occupation": "",
-        "phone": "",
-        "email": "",
-        "CreationDate": ""
+        "name": "Ivan",
+        "occupation": "Backend",
+        "phone": "8 127 127 01 01",
+        "email": "back@end.ru",
+        "CreationDate": "11.11.20"
+      }
+    },
+    {
+      "id": "4",
+      "visualized": false,
+      "fields": {
+        "name": "Konstantin",
+        "occupation": "Takeoff Staff",
+        "phone": "8 777 777 77 77",
+        "email": "takeoff@staff.ru",
+        "CreationDate": "13.07.20"
       }
     },
     {

@@ -36,7 +36,6 @@ function Row({currentNote, num, isFirstRow = false}) {
       const changedNotePromise =
         fetchData(urlNotes, "GET", JWT)
         .then(arr => {
-          console.log(arr)
           return arr.filter(el => el.id === cellY)[0]
         })
         .then(note => {

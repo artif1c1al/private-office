@@ -7,10 +7,28 @@ export default function Search() {
 
   const search = (e) => {
     const currentReqest = `${e.target.value}`
-    const url = `http://localhost:3002/notes?fields.${searchBy}_like=${currentReqest}`
+    // console.log(currentReqest)
+    // const url = `http://localhost:3002/notes?fields.${searchBy}_like=${currentReqest}`
+    const notesUrl = `http://localhost:3002/notes`
+    fetchData(notesUrl, 'GET', JWT, '')
+      .then(resp => {
 
-    fetchData(url, 'GET', JWT, '')
-      .then(resp => setNotes(resp))
+        const checkEquality = (substr, str, note) => {
+          const substrLength = substr.length
+          if(str.slice(0, substrLength) === substr){
+            return note
+          }
+        }
+
+
+        const notes = resp.filter(
+          note => note.fields[searchBy]
+            .slice(0, currentReqest.length)
+            .toLowerCase() === currentReqest.toLowerCase()
+        )
+        // const notes = resp.map(note => checkEquality(currentReqest, note.fields.name, note))
+        setNotes(notes)
+      })
   }
 
   return (
