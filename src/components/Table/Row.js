@@ -17,6 +17,7 @@ function Row({currentNote, num, isFirstRow = false}) {
   const ShowFields = ({fieldsArr}) => {
     const [isContentEditable, setIsContentEdiatble] = useState(false)
 
+
     const toggleContentEditable = () => {
       setIsContentEdiatble(!isContentEditable)
     }
@@ -30,6 +31,7 @@ function Row({currentNote, num, isFirstRow = false}) {
     const cellChange = (e) => {
       const {cellX, cellY} = getXYofCell(e.currentTarget)
       let keys = ["name", "occupation", "phone", "email", "CreationDate"]
+      const {textContent} = e.currentTarget
 
       let changedNote = {}
       const urlNotes = `http://localhost:3002/notes/`
@@ -46,23 +48,34 @@ function Row({currentNote, num, isFirstRow = false}) {
       const sendedChangesPromise =
       changedNotePromise
         .then(() => {
-          changedNote.fields[keys[cellX - 1]] = e.target.value
+          changedNote.fields[keys[cellX - 1]] = textContent
           return fetchData(urlNotes, "PUT", JWT, cellY, changedNote)
         })
     }
 
     return fieldsArr.map((field, i) => {
       return (
-        <ContentEditable
-          html={field}
+        <div
           className="table__cell"
           data-cell={i+1}
-          onChange={cellChange}
-          // onBlur={cellLooseFocus}
+          onInput={cellChange}
           onDoubleClick={toggleContentEditable}
-          disabled={isFirstRow || !isContentEditable}
+          contentEditable={isFirstRow || isContentEditable}
+          suppressContentEditableWarning={true}
           key={i}
-        />
+        >
+          {field}
+        </div>
+        // <ContentEditable
+        //   html={field}
+        //   className="table__cell"
+        //   data-cell={i+1}
+        //   onChange={cellChange}
+        //   // onBlur={cellLooseFocus}
+        //   onDoubleClick={toggleContentEditable}
+        //   disabled={isFirstRow || !isContentEditable}
+        //   key={i}
+        // />
       );
     })
   }

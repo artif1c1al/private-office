@@ -7,8 +7,6 @@
     <list default="true" id="9c2713f0-ba7b-4574-9b4a-4d5a3779dc27" name="Default Changelist" comment="try to add react-contenteditable">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Row.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +88,7 @@
       <workItem from="1609483975021" duration="2386000" />
       <workItem from="1609946324819" duration="41653000" />
       <workItem from="1610097362508" duration="49186000" />
+      <workItem from="1610303335721" duration="6622000" />
     </task>
     <task id="LOCAL-00001" summary="try to add react-contenteditable">
       <created>1609178933519</created>
