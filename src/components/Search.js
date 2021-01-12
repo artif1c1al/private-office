@@ -4,15 +4,12 @@ import {fetchData} from "./utils";
 
 export default function Search() {
   const { setNotes, searchBy, JWT } = useContext(Context)
+  const {REACT_APP_NOTES} = process.env
 
   const search = (e) => {
     const currentReqest = `${e.target.value}`
-    // console.log(currentReqest)
-    // const url = `http://localhost:3002/notes?fields.${searchBy}_like=${currentReqest}`
-    const notesUrl = `http://localhost:3002/notes`
-    fetchData(notesUrl, 'GET', JWT, '')
+    fetchData(REACT_APP_NOTES, 'GET', JWT, '')
       .then(resp => {
-
         const checkEquality = (substr, str, note) => {
           const substrLength = substr.length
           if(str.slice(0, substrLength) === substr){
@@ -26,7 +23,6 @@ export default function Search() {
             .slice(0, currentReqest.length)
             .toLowerCase() === currentReqest.toLowerCase()
         )
-        // const notes = resp.map(note => checkEquality(currentReqest, note.fields.name, note))
         setNotes(notes)
       })
   }

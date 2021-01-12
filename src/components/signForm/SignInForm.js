@@ -10,6 +10,7 @@ function SignInForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const {JWT, setJWT, setIsSignIn} = useContext(Context)
+  const {REACT_APP_LOGIN} = process.env
 
   const emailChage = (e) => setEmail(e.target.value)
   const passwordChange = (e) => setPassword(e.target.value)
@@ -21,7 +22,7 @@ function SignInForm() {
       password
     }
 
-    fetchData("http://localhost:3002/login", "POST", JWT, '', payload)
+    fetchData(REACT_APP_LOGIN, "POST", JWT, '', payload)
       .then(res => {
         setJWT(res.accessToken)
         if (res.accessToken) {

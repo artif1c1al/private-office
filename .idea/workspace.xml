@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2713f0-ba7b-4574-9b4a-4d5a3779dc27" name="Default Changelist" comment="try to add react-contenteditable">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Control.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Control.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Row.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Content.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +20,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ef212896-5998-414e-8db2-686314761a19" />
   </component>
   <component name="ProjectId" id="1m7GCb6KpO2h0OWauWLZHFqC8IM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -89,6 +98,8 @@
       <workItem from="1609946324819" duration="41653000" />
       <workItem from="1610097362508" duration="49186000" />
       <workItem from="1610303335721" duration="6622000" />
+      <workItem from="1610402320245" duration="172000" />
+      <workItem from="1610474179495" duration="4010000" />
     </task>
     <task id="LOCAL-00001" summary="try to add react-contenteditable">
       <created>1609178933519</created>

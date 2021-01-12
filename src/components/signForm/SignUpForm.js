@@ -10,6 +10,7 @@ function SignUpForm() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const history = useHistory()
   const {JWT} = useContext(Context)
+  const {REACT_APP_REGISTR} = process.env
 
   const onEmailChange = (e) => {
     setEmail(e.target.value)
@@ -29,13 +30,11 @@ function SignUpForm() {
       alert('Passwords are not equal!')
       return
     }
-
     const payload = {
       email: email,
       password: password
     }
-    const url = "http://localhost:3002/register"
-    fetchData(url, "POST", JWT, '', payload)
+    fetchData(REACT_APP_REGISTR, "POST", JWT, '', payload)
       .then(resp => console.log(resp))
       .then(() => history.push('/signin'))
   }

@@ -10,6 +10,7 @@ function Control() {
     setSearchBy,
     JWT
   } = useContext(Context)
+  const {REACT_APP_NOTES} = process.env
 
   const addHandler = () => {
     const newNote = {
@@ -24,8 +25,7 @@ function Control() {
       }
     }
 
-    const urlNotes = "http://localhost:3002/660/notes"
-    fetchData(urlNotes, "POST", JWT, '', newNote)
+    fetchData(REACT_APP_NOTES, "POST", JWT, '', newNote)
       .then(note => setNotes([...notes, note]))
   }
 
@@ -38,8 +38,7 @@ function Control() {
       .map(note => note.id)
 
     visRows.forEach(removeNoteId => {
-      const urlDelete = `http://localhost:3002/660/notes/`
-      fetchData(urlDelete, "DELETE", JWT, removeNoteId)
+      fetchData(REACT_APP_NOTES, "DELETE", JWT, removeNoteId)
         .then(() => {
           fetchData(urlDelete, "GET", JWT)
             .then(notes => setNotes(notes))

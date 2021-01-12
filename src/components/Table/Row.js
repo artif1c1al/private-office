@@ -13,6 +13,7 @@ function Row({currentNote, num, isFirstRow = false}) {
     isRemoveMode,
     JWT,
   } = useContext(Context)
+  const {REACT_APP_NOTES} = process.env
 
   const ShowFields = ({fieldsArr}) => {
     const [isContentEditable, setIsContentEdiatble] = useState(false)
@@ -34,9 +35,8 @@ function Row({currentNote, num, isFirstRow = false}) {
       const {textContent} = e.currentTarget
 
       let changedNote = {}
-      const urlNotes = `http://localhost:3002/notes/`
       const changedNotePromise =
-        fetchData(urlNotes, "GET", JWT)
+        fetchData(REACT_APP_NOTES, "GET", JWT)
         .then(arr => {
           return arr.filter(el => el.id === cellY)[0]
         })
@@ -49,7 +49,7 @@ function Row({currentNote, num, isFirstRow = false}) {
       changedNotePromise
         .then(() => {
           changedNote.fields[keys[cellX - 1]] = textContent
-          return fetchData(urlNotes, "PUT", JWT, cellY, changedNote)
+          return fetchData(REACT_APP_NOTES, "PUT", JWT, cellY, changedNote)
         })
     }
 
@@ -66,16 +66,6 @@ function Row({currentNote, num, isFirstRow = false}) {
         >
           {field}
         </div>
-        // <ContentEditable
-        //   html={field}
-        //   className="table__cell"
-        //   data-cell={i+1}
-        //   onChange={cellChange}
-        //   // onBlur={cellLooseFocus}
-        //   onDoubleClick={toggleContentEditable}
-        //   disabled={isFirstRow || !isContentEditable}
-        //   key={i}
-        // />
       );
     })
   }
