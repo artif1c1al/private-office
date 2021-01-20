@@ -2,13 +2,8 @@
   "users": [
     {
       "email": "zhuravlenkoartem@gmail.com",
-      "password": "$2a$10$HoxXSGycgbuFrOFDO.axKuEVb1X00hdGXk05J273RCy2uFZ35pRjq",
+      "password": "$2a$10$OrIIEiya8Pj0MvtNDHmtluFa5XnBJsOOsImE.T/kRXqMBknB6NCi2",
       "id": 1
-    },
-    {
-      "email": "azhur200@rambler.ru",
-      "password": "$2a$10$oc4qODrzzGdX4kCcjG2rk.coz6t4X9WglgltNSVVWM9xP8wTNmhTy",
-      "id": 2
     }
   ],
   "notes": [

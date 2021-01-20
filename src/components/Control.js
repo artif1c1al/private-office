@@ -40,7 +40,7 @@ function Control() {
     visRows.forEach(removeNoteId => {
       fetchData(REACT_APP_NOTES, "DELETE", JWT, removeNoteId)
         .then(() => {
-          fetchData(urlDelete, "GET", JWT)
+          fetchData(REACT_APP_NOTES, "GET", JWT)
             .then(notes => setNotes(notes))
         })
     })
